@@ -34,20 +34,43 @@ body {
   }
 }
 
-.rounded__btn {
-  padding: 12px 24px;
+// BTN
 
-  text-align: center;
-  font-family: Poppins;
-  font-size: 16px;
+.rounded {
+  &__btn {
+    padding: 12px 24px;
 
-  font-weight: 500;
-  line-height: 160%; /* 25.6px */
-  width: 109px;
-  height: 50px;
-  border-radius: 50px;
-  background: #fff0ec;
-  color: #fd7461;
+    text-align: center;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(25.6 / 16); /* 25.6px */
+    width: 109px;
+    height: 50px;
+    border-radius: 50px;
+    background: $rounded_bg;
+    color: $rounded_color;
+    transition: background-color 250ms ease, color 250ms ease;
+    @media (max-width: $breakpoint992) {
+      display: none;
+      &.active {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: $rounded_color;
+        border-radius: 0;
+        color: #ffffff;
+      }
+    }
+
+    &:hover {
+      background-color: $rounded_color;
+      color: $rounded_bg;
+    }
+  }
 }
 
 // Animations

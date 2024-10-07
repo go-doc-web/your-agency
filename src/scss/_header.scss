@@ -19,19 +19,102 @@
     display: flex;
     align-items: center;
     gap: 31px;
+    @media (max-width: $breakpoint480) {
+      gap: 0;
+    }
   }
 }
 .logo {
   a {
-    color: white;
+    color: $primery;
+    img {
+      @media (max-width: $breakpoint480) {
+        max-width: 100px;
+      }
+    }
   }
+}
+
+// Select
+.select {
+  width: 45px;
+  position: relative;
+}
+
+.select.is-active .select__body {
+  display: block;
+}
+
+.select__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: 45px;
+}
+
+.select__current {
+  color: $primery;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px; /* 187.5% */
+}
+
+.select__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  text-align: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  transform: rotate(0);
+  transition: transform 300ms ease;
+}
+
+.select__icon--rotate {
+  transform: rotate(180deg);
+}
+
+.select__body {
+  display: none;
+  width: 100%;
+
+  border-top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: 50px; */
+  top: 100%;
+}
+
+.select__item {
+  color: $primeryLigth;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 187.5% */
+  padding: 8px;
+  background-color: $selectBody;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+
+.select__item:hover {
+  background-color: $rounded_color;
 }
 
 // ========================== [ Menu styles ] ==========================
 .menu {
   display: flex;
   gap: 40px;
-
+  @media (max-width: $breakpoint1100) {
+    gap: 30px;
+  }
   // .menu__item
   &__item {
     display: flex;
@@ -49,6 +132,9 @@
     font-weight: 400;
     line-height: 160%; /* 22.4px */
     transition: 0.5s color;
+    @media (max-width: $burgerBreakpoint) {
+      color: #ffffff;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -66,9 +152,7 @@
 
     &--active {
       color: #000000;
-
       font-size: 14px;
-      font-style: normal;
       font-weight: 500;
       line-height: 160%; /* 22.4px */
     }
@@ -84,7 +168,7 @@
   // Mobile menu styles
   @media screen and (max-width: $burgerBreakpoint) {
     position: fixed;
-    background: $burgerColor;
+    background: $secondary;
     left: 0;
     top: 0;
     height: 100vh;
