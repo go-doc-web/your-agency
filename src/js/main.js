@@ -1,3 +1,5 @@
+@@include('tabs.js')
+
 // Мобильное меню бургер
 function burgerMenu() {
   const burger = document.querySelector(".burger");
@@ -19,14 +21,14 @@ function burgerMenu() {
     }
   });
   // Вот тут мы ставим брейкпоинт навбара
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth > 991.98) {
-  //       menu.classList.remove("active");
-  //       burger.classList.remove("active");
-  //       body.classList.remove("locked");
-  //       roundedBtn.classList.remove("active");
-  //     }
-  //   });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 991.98) {
+        menu.classList.remove("active");
+        burger.classList.remove("active");
+        body.classList.remove("locked");
+        roundedBtn.classList.remove("active");
+      }
+    });
 }
 burgerMenu();
 
@@ -67,3 +69,4 @@ let select = function () {
   });
 };
 select();
+

@@ -1,6 +1,7 @@
 .section {
   &__hero {
     padding-top: 61px;
+    padding-bottom: 144px;
     @media (max-width: $breakpoint768) {
       padding-top: 41px;
     }
@@ -14,7 +15,7 @@
   display: flex;
 
   align-items: center;
-  gap: 66px;
+  gap: 63px;
   @media (max-width: $breakpoint1200) {
     justify-content: space-between;
     gap: 30px;
@@ -202,6 +203,7 @@
 
   .rating__stars {
     display: block;
+    width: 107px;
     @media (max-width: $breakpoint1200) {
       width: 100px;
     }

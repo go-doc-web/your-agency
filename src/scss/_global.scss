@@ -25,6 +25,7 @@
 // Body & Locked
 body {
   font-family: $fontMain;
+  background: #ffffff;
   &.locked {
     overflow: hidden;
   }
@@ -74,7 +75,7 @@ body {
 }
 
 .btn {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
