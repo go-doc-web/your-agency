@@ -2,8 +2,13 @@
   &__hero {
     padding-top: 61px;
     padding-bottom: 144px;
-    @media (max-width: $breakpoint768) {
+    @media (max-width: $breakpoint992) {
       padding-top: 41px;
+      padding-bottom: 92px;
+    }
+    @media (max-width: $breakpoint768) {
+      padding-top: 21px;
+      padding-bottom: 41px;
     }
     @media (max-width: $breakpoint480) {
       padding-top: 21px;
@@ -27,7 +32,7 @@
 
   @media (max-width: $breakpoint768) {
     flex-wrap: wrap;
-    row-gap: 12px;
+    row-gap: 32px;
   }
 
   .first__item {

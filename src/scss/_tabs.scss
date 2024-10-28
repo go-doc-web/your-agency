@@ -2,6 +2,14 @@
   padding-top: 100px;
   padding-bottom: 146px;
   background-color: #fdf9f8;
+
+  @media (max-width: $breakpoint1200) {
+    padding-top: 80px;
+    padding-bottom: 41px;
+  }
+  @media (max-width: $breakpoint768) {
+    padding-top: 41px;
+  }
 }
 
 .tabs {
@@ -13,8 +21,12 @@
   align-items: center;
   gap: 48px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint768) {
     flex-wrap: wrap;
+    gap: 24px;
+  }
+  @media (max-width: $breakpoint480) {
+    gap: 16px;
   }
 }
 .tabs__header-item {
@@ -24,6 +36,13 @@
   font-weight: 500;
   line-height: 180%; /* 43.2px */
   cursor: pointer;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 22px;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 18px;
+  }
 }
 .tabs__header-item.active {
   color: red;
@@ -34,13 +53,22 @@
   position: absolute;
   bottom: -8px;
   left: 0;
-  width: 79px;
+  width: 100%;
   height: 3px;
   background: #f0998d;
+  @media (max-width: $breakpoint480) {
+    bottom: -4px;
+  }
 }
 
 .tabs__content {
   margin-top: 72px;
+  @media (max-width: $breakpoint768) {
+    margin-top: 42px;
+  }
+  @media (max-width: $breakpoint480) {
+    margin-top: 21px;
+  }
 }
 
 .tab {
@@ -48,6 +76,17 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 65px;
+
+  @media (max-width: $breakpoint768) {
+    flex-wrap: wrap;
+    gap: 21px;
+  }
+}
+
+.tab-item {
+  @media (max-width: $breakpoint768) {
+    flex-basis: 100%;
+  }
 }
 
 .tab-title {
@@ -61,15 +100,31 @@
   &-accent {
     color: #f0998d;
   }
+  @media (max-width: $breakpoint1200) {
+    max-width: 300px;
+    font-size: 38px;
+  }
+  @media (max-width: $breakpoint992) {
+    font-size: 34px;
+  }
 }
 
 .tab-text {
   margin-top: 24px;
-  max-width: 368px;
+  max-width: 369px;
   color: $primeryLigth;
   font-size: 18px;
   font-weight: 400;
   line-height: 180%; /* 32.4px */
+
+  @media (max-width: $breakpoint992) {
+    font-size: 16px;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 14px;
+    margin-top: 18px;
+    width: 100%;
+  }
 }
 
 .tab-subtitle {
@@ -79,6 +134,13 @@
   font-weight: 400;
   line-height: 180%; /* 25.2px */
   letter-spacing: 2.8px;
+  @media (max-width: $breakpoint992) {
+    font-size: 13px;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 12px;
+    margin-top: 24px;
+  }
 }
 
 .tab-tags {
@@ -86,6 +148,9 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  @media (max-width: $breakpoint480) {
+    gap: 16px;
+  }
 
   .tag-item {
     position: relative;
@@ -93,6 +158,17 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 180%; /* 32.4px */
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 13px;
+    }
+  }
+
+  .tab-item-left {
+    width: 368px;
   }
 
   .tag-item:not(:last-child)::after {
@@ -104,6 +180,11 @@
     height: 16px;
     opacity: 0.1;
     background: #1d2736;
+    @media (max-width: $breakpoint480) {
+      right: -8px;
+      top: 5px;
+      height: 13px;
+    }
   }
 }
 
@@ -112,17 +193,24 @@
   padding: 20px 45px;
 }
 
-.tab-item-rigth img {
+.tab-item__img {
   display: block;
+  @media (max-width: $breakpoint1200) {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+  }
 }
 
-// manage
+.tabs__content-item {
+  animation: fade 0.5s linear;
+}
 
-.manage {
-  .tab {
-    gap: 124px;
-  }
-  .tab-subtitle {
-    margin-top: 64px;
+.chat {
+  .tab-title {
+    max-width: 256px;
+    @media (max-width: $breakpoint992) {
+      max-width: 230px;
+    }
   }
 }
