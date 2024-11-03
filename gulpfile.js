@@ -130,6 +130,10 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+gulp.task("deploy", function () {
+  return gulp.src("./dist/**/*").pipe(ghPages());
+});
+
 // Watch Files
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
