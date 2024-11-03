@@ -89,23 +89,12 @@
   }
 }
 
-.tab-title {
-  max-width: 368px;
-
-  color: $primery;
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 110%; /* 50.6px */
-  letter-spacing: -1.38px;
-  &-accent {
-    color: #f0998d;
-  }
-  @media (max-width: $breakpoint1200) {
-    max-width: 300px;
-    font-size: 38px;
-  }
-  @media (max-width: $breakpoint992) {
-    font-size: 34px;
+.section-title {
+  &--tabs {
+    max-width: 368px;
+    @media (max-width: $breakpoint1200) {
+      max-width: 300px;
+    }
   }
 }
 

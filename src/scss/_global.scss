@@ -35,6 +35,35 @@ body {
   }
 }
 
+.section-title {
+  color: #1d2736;
+  font-family: Poppins;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 50.6px */
+  letter-spacing: -1.38px;
+  span {
+    color: #f0998d;
+  }
+  @media (max-width: $breakpoint1200) {
+    max-width: 300px;
+    font-size: 38px;
+  }
+  @media (max-width: $breakpoint992) {
+    font-size: 34px;
+  }
+}
+
+.section-text {
+  color: #677487;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 32.4px */
+}
+
 // BTN
 
 .rounded {
