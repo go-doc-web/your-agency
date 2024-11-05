@@ -1,6 +1,3 @@
-const ghPages = require("gh-pages");
-const pathGP = require("path");
-
 let project_folder = "build";
 let source_folder = "src";
 
@@ -133,11 +130,6 @@ function css() {
     .pipe(browsersync.stream());
 }
 
-function deploy(cb) {
-  ghPages.publish(pathGP.join(process.cwd(), "./build"), cb);
-}
-exports.deploy = deploy;
-
 // Watch Files
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
@@ -167,4 +159,3 @@ exports.fonts = fonts;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
-exports.deploy = deploy;
